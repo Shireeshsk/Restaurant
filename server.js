@@ -20,5 +20,5 @@ app.use('/person',personRouter);
 
 const port = process.env.PORT || 2005;
 app.listen(port,()=>{
-    console.log("Server is listening on port 2500")
+    console.log("Server is listening on port 2005")
 });
