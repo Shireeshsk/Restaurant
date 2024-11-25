@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const db = require('./db');
+require('dotenv').config();
 
 const bodyparser = require('body-parser');
 app.use(bodyparser.json());
@@ -17,6 +18,7 @@ app.use('/item',menurouter);
 const personRouter = require('./routes/personroute');
 app.use('/person',personRouter);
 
-app.listen(2500,()=>{
+const port = process.env.PORT || 2005;
+app.listen(port,()=>{
     console.log("Server is listening on port 2500")
 });
