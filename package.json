@@ -1,0 +1,19 @@
+{
+  "name": "node_tutorial",
+  "version": "1.0.0",
+  "description": "this is a node js tutorial",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "shireesh kumar",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "express": "^4.21.1",
+    "lodash": "^4.17.21",
+    "mongodb": "^6.11.0",
+    "mongoose": "^8.8.2",
+    "nodemon": "^3.1.7"
+  }
+}
