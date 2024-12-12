@@ -38,7 +38,7 @@ router.post('/',async (req,res)=>{
         console.log('data saved');
         res.status(200).json(response);
     }catch(err){
-        console.log(err);
+        console.log("error in saving  data" ,err);
         res.status(500).json({error:"Internal Server error"});
     }
 });

@@ -2,10 +2,10 @@ const passport = require('passport');
 const person = require('./models/person');
 const localStrategy = require('passport-local').Strategy;
 
-passport.use(new localStrategy(async (USERNAME,password,done)=>{
+passport.use(new localStrategy(async (username,password,done)=>{
     try{
         //console.log('Received credentials: ',USERNAME,password);
-        const user = await person.findOne({USERNAME});
+        const user = await person.findOne({username});
         if(!user){
             return done(null,false,{message:'Incorrect username.'});
         }
