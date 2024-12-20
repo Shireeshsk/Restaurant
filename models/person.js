@@ -43,7 +43,7 @@ const personschema = new mongoose.Schema({
 
 personschema.pre('save',async function(next){
     const person = this;
-
+    
     if(!person.isModified('password')) return next();
     try{
         const salt = await bcrypt.genSalt(10);
@@ -63,5 +63,5 @@ personschema.methods.comparePassword = async function(candidatepassword){
         throw err;
     }
 } 
-const person = mongoose.model('Person',personschema);
-module.exports = person;
+const Person = mongoose.model('Person',personschema);
+module.exports = Person;
